@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SimbrSoft Java Program</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+
+
+
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="https://www.simbirsoft.com/">SimbirSoft</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link active" href="/">Home <span
+					class="sr-only">(current)</span></a> <a
+					class="nav-item nav-link active" href="/история">History <span
+					class="sr-only">(current)</span></a> <a
+					class="nav-item nav-link active" href="https://disk.yandex.ru/i/WLi-ZvgmYRU-7g">Task <span
+					class="sr-only">(current)</span></a>
+			</div>
+		</div>
+	</nav>
+
+	<br />
+	<br />
+
+
+	<!-- partial:index.partial.html -->
+	<div class="container my-m2">
+		<form th:action="@{/сохранитьпоиск}" th:object="${search}" method="post">
+			<!-- Another variation with a button -->
+			<div class="input-group">
+				<input type="url" th:field="*{link}" class="form-control"
+					placeholder="Enter Url">
+				<div class="input-group-append">
+					<button type="submit" class="btn btn-outline-primary">Get Words</button>
+				</div>
+			</div>
+		</form>
+
+		<p class="mt-4 text-center">
+			<a href="https://disk.yandex.ru/i/WLi-ZvgmYRU-7g">Task Link </a>
+		</p>
+
+	</div>
+	<!-- partial -->
+
+</body>
+</html>
